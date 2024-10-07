@@ -1,0 +1,10 @@
+import random
+
+def get_numbers_ticket(min, max, quantity):
+    
+    numbers = list(range(min, max + 1))
+    sample = random.sample(numbers, quantity)
+    return sample
+
+lottery_numbers = get_numbers_ticket(1, 12, 3)
+print("Ваші лотерейні числа:", lottery_numbers)
