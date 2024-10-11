@@ -1,10 +1,12 @@
 import random
 
 def get_numbers_ticket(min, max, quantity):
-    
     numbers = list(range(min, max + 1))
+    if quantity > len(numbers):
+        return f"Помилка: не можна вибрати {quantity} чисел з діапазону {min}-{max}."
     sample = random.sample(numbers, quantity)
     return sample
 
-lottery_numbers = get_numbers_ticket(1, 12, 3)
+lottery_numbers = get_numbers_ticket(1, 12, 30)
 print("Ваші лотерейні числа:", lottery_numbers)
+
